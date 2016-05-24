@@ -1,0 +1,438 @@
+[
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_voice_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_voice_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_layout_loading_data.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_layout_loading_data.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_search_message.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_search_message.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_context_menu_for_location.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_context_menu_for_location.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_alert_dialog.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_alert_dialog.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_location.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_location.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/tb_munion_adview.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/tb_munion_adview.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_context_menu_for_voice.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_context_menu_for_voice.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_chat.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_chat.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_conversation_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_register.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_register.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_group_simle_details.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_group_simle_details.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_robots.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_robots.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_context_menu_for_text.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_context_menu_for_text.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_context_menu_for_image.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_context_menu_for_image.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_contact_with_checkbox.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_contact_with_checkbox.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_logout_actionsheet.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_logout_actionsheet.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_public_groups.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_public_groups.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_edit.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_edit.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_chat_primary_menu.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_chat_primary_menu.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_add_group.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_add_group.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_splash.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_splash.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_robots.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_robots.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_message.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_message.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_new_group.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_new_group.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_chat.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_chat.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_main.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_main.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_search_bar_with_padding.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_contacts_header.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_contacts_header.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_emojicon_tab_bar.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_emojicon_tab_bar.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/tb_munion_aditem.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/tb_munion_aditem.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_message.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_message.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_group_pick_contacts.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_group_pick_contacts.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_video_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_video_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_invite_msg.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_invite_msg.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_video.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_video.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_activity_show_file.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_activity_show_file.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_main_botton_tab.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_main_botton_tab.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_activity_baidumap.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_activity_baidumap.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_widget_contact_item.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_widget_contact_item.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_black_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_black_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_expression.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_expression.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_main_init_view.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_main_init_view.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_voice.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_voice.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_offline_push.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_offline_push.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_voice_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_voice_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_bigexpression.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_bigexpression.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_video.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_video.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_file.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_file.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_video_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_video_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_voice_recorder.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_login.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_login.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_recorder_activity.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_recorder_activity.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_emojicon.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_emojicon.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_chat_history.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_chat_history.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_switch_button.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_switch_button.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_fragment_conversation_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_fragment_conversation_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_image_grid_fragment.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_image_grid_fragment.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_add_contact.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_add_contact.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_row_group.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_row_group.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_context_menu_for_video.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_context_menu_for_video.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_location.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_location.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_chat_input_menu.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_chat_input_menu.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_picture.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_picture.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_search_bar.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_search_bar.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_chat_message_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_chat_message_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_layout_emojicon_menu.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_layout_emojicon_menu.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/umeng_common_download_notification.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/umeng_common_download_notification.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_expression_gridview.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_expression_gridview.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_group_details.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_group_details.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/umeng_update_dialog.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/umeng_update_dialog.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_group_blacklist.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_group_blacklist.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_chat_menu_item.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_chat_menu_item.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_title_bar.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_title_bar.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_search_bar_with_padding.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_diagnose.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_diagnose.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_commom_back_btn.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_commom_back_btn.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_layout_chat_primary_menu.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_layout_chat_primary_menu.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_picture.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_picture.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_listview_footer_view.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_listview_footer_view.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_bigexpression.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_bigexpression.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_public_groups_search.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_public_groups_search.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_activity_show_big_image.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_activity_show_big_image.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_groups.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_groups.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_new_friends_msg.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_new_friends_msg.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_choose_griditem.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_choose_griditem.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_contact.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_contact.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_conversation_settings.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_conversation_settings.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_video_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_video_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_fragment_chat.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_fragment_chat.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_voice.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_voice.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_pick_contact_no_checkbox.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_pick_contact_no_checkbox.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_group_search_message.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_group_search_message.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_sent_voice_call.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_sent_voice_call.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_widget_contact_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_widget_contact_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_choosevideoactivity.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_choosevideoactivity.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_chatroom.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_chatroom.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_grid.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_grid.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_received_file.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_received_file.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_showvideo_activity.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_showvideo_activity.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_fragment_contact_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_fragment_contact_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_show_file.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_show_file.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_conversation_item.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_conversation_item.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_emojicon.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_emojicon.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_scroll_tab_item.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_scroll_tab_item.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_activity_user_profile.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_activity_user_profile.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_fragment_contact_list.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_fragment_contact_list.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/em_chat_neterror_item.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/layout/em_chat_neterror_item.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/layout/ease_row_big_expression.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/exploded-aar/ChatDemoUI3.0/EaseUI/unspecified/res/layout/ease_row_big_expression.xml"
+    }
+]

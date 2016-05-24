@@ -1,0 +1,223 @@
+-injars /Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/transforms/jarMerging/debug/jars/1/1f/combined.jar
+-outjars /Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/multi-dex/debug/componentClasses.jar
+
+-libraryjars /Users/android/Documents/Android/sdk/build-tools/23.0.1/lib/shrinkedAndroid.jar
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontusemixedcaseclassnames
+-dontpreverify
+-dontwarn
+-printconfiguration /Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/multi-dex/debug/components.flags
+
+
+-keep class com.hyphenate.times.DemoApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class com.hyphenate.times.ui.MainActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.SplashActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.LoginActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.RegisterActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ChatActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.applib.ui.ChatActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.AddContactActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupDetailsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ChatRoomActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ChatRoomDetailsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.NewGroupActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ExitGroupDialog {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupPickContactsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseBaiduMapActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.NewFriendsMsgActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ForwardMessageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ContextMenuActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowBigImageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowNormalFileActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.BlacklistActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.PublicGroupsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.PublicChatRoomsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.VoiceCallActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.VideoCallActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupSimpleDetailActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupBlacklistActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.GroupSearchMessageActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.PublicGroupsSeachActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.EditActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.easeui.ui.EaseShowVideoActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.ImageGridActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.RecorderVideoActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.DiagnoseActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.OfflinePushNickActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.RobotsActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.UserProfileActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.receiver.StartServiceReceiver {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMGCMBroadcastReceiver {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMGCMListenerService {
+    <init>();
+}
+
+-keep class com.hyphenate.times.receiver.GCMPushBroadCast {
+    <init>();
+}
+
+-keep class com.xiaomi.mipush.sdk.PushMessageHandler {
+    <init>();
+}
+
+-keep class com.xiaomi.mipush.sdk.MessageHandleService {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMMipushReceiver {
+    <init>();
+}
+
+-keep class com.umeng.update.net.DownloadingService {
+    <init>();
+}
+
+-keep class com.umeng.update.UpdateDialogActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMChatService {
+    <init>();
+}
+
+-keep class com.hyphenate.chat.EMMonitorReceiver {
+    <init>();
+}
+
+-keep class com.baidu.location.f {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}
