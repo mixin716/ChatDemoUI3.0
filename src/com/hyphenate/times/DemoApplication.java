@@ -23,6 +23,7 @@ public class DemoApplication extends Application {
 	private static DemoApplication instance;
 	// login user name
 	public final String PREF_USERNAME = "username";
+	public static int actionbarHeight = 0;
 	
 	/**
 	 * 当前用户nickname,为了苹果推送不是userid而是昵称

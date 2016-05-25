@@ -25,6 +25,26 @@
     <init>();
 }
 
+-keep class com.hyphenate.times.ui.MyLoginSelectPhoneActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.MyLoginCheckActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.country.CountryActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.MyLoginFinishActivity {
+    <init>();
+}
+
+-keep class com.hyphenate.times.ui.MyLoginInitActivity {
+    <init>();
+}
+
 -keep class com.hyphenate.times.ui.LoginActivity {
     <init>();
 }

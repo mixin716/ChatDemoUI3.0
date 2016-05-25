@@ -1,22 +1,26 @@
 [
     {
-        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_remove_from_blacklist.xml",
-        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_remove_from_blacklist.xml"
-    },
-    {
         "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_context_tab_contact.xml",
         "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_context_tab_contact.xml"
+    },
+    {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_remove_from_blacklist.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_remove_from_blacklist.xml"
     },
     {
         "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_context_contact_list.xml",
         "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_context_contact_list.xml"
     },
     {
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_delete_contact.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_delete_contact.xml"
+    },
+    {
         "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_delete_message.xml",
         "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_delete_message.xml"
     },
     {
-        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_delete_contact.xml",
-        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_delete_contact.xml"
+        "merged": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/build/intermediates/res/merged/debug/menu/em_connect.xml",
+        "source": "/Users/android/Desktop/android_IM_sdk_V3.1.2r2/examples/ChatDemoUI3.0/res/menu/em_connect.xml"
     }
 ]

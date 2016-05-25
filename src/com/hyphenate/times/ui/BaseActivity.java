@@ -14,12 +14,22 @@
 
 package com.hyphenate.times.ui;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.hyphenate.easeui.ui.EaseBaseActivity;
+import com.hyphenate.times.R;
+import com.hyphenate.times.utils.DialogError;
 import com.umeng.analytics.MobclickAgent;
 
 public class BaseActivity extends EaseBaseActivity {
+
+    private DialogError.MyDialog loadingDialog ;
 
     @Override
     protected void onCreate(Bundle arg0) {
@@ -40,5 +50,29 @@ public class BaseActivity extends EaseBaseActivity {
         MobclickAgent.onPause(this);
     }
 
+
+    public void showLoading(String msg){
+        View contentView = View.inflate(BaseActivity.this, R.layout.dialog_loading,null);
+        loadingDialog = new DialogError.MyDialog(BaseActivity.this, R.style.dialog_loading);
+        TextView tvMsg = (TextView) contentView.findViewById(R.id.dialog_loading_tv);
+        if(!TextUtils.isEmpty(msg)){
+            tvMsg.setText(msg);
+        }
+
+        loadingDialog.setContentView(contentView);// 设置布局
+        loadingDialog.show();
+        Window win = loadingDialog.getWindow();
+        win.getDecorView().setPadding(0, 0, 0, 0);
+        WindowManager.LayoutParams lp = win.getAttributes();
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        win.setAttributes(lp);
+    }
+
+    public void dismissDialog(){
+        if(loadingDialog != null){
+            loadingDialog.dismiss();
+        }
+    }
 
 }

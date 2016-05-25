@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="AppTheme">
+        <item name="android:actionBarStyle" >@style/myActionBarStyle</item>
+    </style>
+    <style name="myActionBarStyle" parent="android:Widget.ActionBar" >
+        <item name="android:background">@color/common_bg_color</item>
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+    </style>
+    <style name="AcBar_titleStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">#ff0000</item>
+    </style>
+    <style name="dialog_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/no_color</item>
+    </style>
+    <style name="dialog_loading_default" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/dialog_bg</item>
+    </style>
+</resources>
