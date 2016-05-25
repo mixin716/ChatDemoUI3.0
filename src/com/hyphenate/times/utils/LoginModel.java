@@ -6,9 +6,6 @@ import com.squareup.okhttp.FormEncodingBuilder;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 
-import java.net.CookieManager;
-import java.net.CookiePolicy;
-
 /**
  * @author GY
  * @date 16/5/25
@@ -20,6 +17,30 @@ public class LoginModel {
     public static void sendCode(String phone,Callback callBack){
         OkHttpClient client = new OkHttpClient();
         String url = Urls.login_get_code + phone;
+        final Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(callBack);
+    }
+
+    /** 验证验证码*/
+    public static void sendVerify(String phone,String code,Callback callBack){
+        OkHttpClient client = new OkHttpClient();
+        String url = Urls.login_get_verify + phone+"&verifycode="+code;
+        final Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(callBack);
+    }
+
+    /** 登录*/
+    public static void sendLogin(String phone,Callback callBack){
+        OkHttpClient client = new OkHttpClient();
+        String url = Urls.login + phone;
         final Request request = new Request.Builder()
                 .url(url)
                 .build();

@@ -231,7 +231,6 @@ public class MyLoginSelectPhoneActivity extends BaseActivity implements Callback
         dismissDialog();
         String result = response.body().string();
         try {
-            result = replaceBlank(result);
             result = result.substring(result.indexOf("{"),result.indexOf("}")+1);
             JSONObject obj = new JSONObject(result);
             int code = obj.optInt("code");

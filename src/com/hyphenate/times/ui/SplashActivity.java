@@ -18,52 +18,51 @@ import com.hyphenate.times.R;
 
 /**
  * 开屏页
- *
  */
 public class SplashActivity extends BaseActivity {
 
-	private TextView agree;
-	private Intent intent;
-	private static final int sleepTime = 2000;
+    private TextView agree;
+    private Intent intent;
+    private static final int sleepTime = 2000;
 
-	@Override
-	protected void onCreate(Bundle arg0) {
-		setContentView(R.layout.em_activity_splash);
-		super.onCreate(arg0);
-		agree = (TextView) findViewById(R.id.iv_splash_agree);
-		agree.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-//				if (DemoHelper.getInstance().isLoggedIn()) {
-//					// ** 免登陆情况 加载所有本地群和会话
-//					//不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
-//					//加上的话保证进了主页面会话和群组都已经load完毕
-//					EMClient.getInstance().groupManager().loadAllGroups();
-//					EMClient.getInstance().chatManager().loadAllConversations();
-//
-//					intent = new Intent(SplashActivity.this,MainActivity.class);
-//					startActivity(intent);
-//					SplashActivity.this.finish();
-//				}else {
-					intent = new Intent(SplashActivity.this,MyLoginSelectPhoneActivity.class);
-					startActivity(intent);
-				    SplashActivity.this.finish();
-//				}
-			}
-		});
-	}
+    @Override
+    protected void onCreate(Bundle arg0) {
+        setContentView(R.layout.em_activity_splash);
+        super.onCreate(arg0);
+        agree = (TextView) findViewById(R.id.iv_splash_agree);
+        agree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (DemoHelper.getInstance().isLoggedIn()) {
+                    // ** 免登陆情况 加载所有本地群和会话
+                    //不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
+                    //加上的话保证进了主页面会话和群组都已经load完毕
+                    EMClient.getInstance().groupManager().loadAllGroups();
+                    EMClient.getInstance().chatManager().loadAllConversations();
 
-	@Override
-	protected void onStart() {
-		super.onStart();
+                    intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    SplashActivity.this.finish();
+                } else {
+                    intent = new Intent(SplashActivity.this, MyLoginSelectPhoneActivity.class);
+                    startActivity(intent);
+                    SplashActivity.this.finish();
+                }
+            }
+        });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
 
 
-	}
-	
-	/**
-	 * 获取当前应用程序的版本号
-	 */
-	private String getVersion() {
-	    return EMClient.getInstance().getChatConfig().getVersion();
-	}
+    }
+
+    /**
+     * 获取当前应用程序的版本号
+     */
+    private String getVersion() {
+        return EMClient.getInstance().getChatConfig().getVersion();
+    }
 }

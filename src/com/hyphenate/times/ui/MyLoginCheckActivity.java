@@ -14,6 +14,7 @@ import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -22,14 +23,29 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.exceptions.HyphenateException;
+import com.hyphenate.times.DemoApplication;
+import com.hyphenate.times.DemoHelper;
 import com.hyphenate.times.R;
+import com.hyphenate.times.utils.DialogError;
+import com.hyphenate.times.utils.LoginModel;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 
 /**
  * @author GY
  * @date 16/5/25
  * @Description:
  */
-public class MyLoginCheckActivity extends BaseActivity implements View.OnClickListener{
+public class MyLoginCheckActivity extends BaseActivity implements View.OnClickListener,Callback{
 
     private EditText etCode;
     private LinearLayout llResend;
@@ -103,8 +119,8 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
             public void afterTextChanged(Editable s) {
                 if(!TextUtils.isEmpty(s.toString())){
                     if(s.length() == 6){
-                        Intent intent = new Intent(MyLoginCheckActivity.this,MyLoginFinishActivity.class);
-                        startActivity(intent);
+                        showLoading("");
+                        LoginModel.sendVerify(code+phone,s.toString(),MyLoginCheckActivity.this);
                     }
                 }
             }
@@ -119,6 +135,17 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
                     resendFlag = false;
                     showLoading("正在发送，请稍后...");
                     handler.sendEmptyMessage(0);
+                    LoginModel.sendCode(code + phone, new Callback() {
+                        @Override
+                        public void onFailure(Request request, IOException e) {
+
+                        }
+
+                        @Override
+                        public void onResponse(Response response) throws IOException {
+                            dismissDialog();
+                        }
+                    });
                 }
                 break;
         }
@@ -140,6 +167,95 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
                 tvResend.setTextColor(Color.parseColor("#999999"));
                 imgResend.setImageResource(R.drawable.ic_reg_sms_disabled);
                 handler.sendEmptyMessageDelayed(0,1000);
+            }
+        }
+    };
+
+    @Override
+    public void onFailure(Request request, IOException e) {
+
+    }
+
+    @Override
+    public void onResponse(Response response) throws IOException {
+
+        String result = response.body().string();
+        try {
+            result = result.substring(result.indexOf("{"),result.indexOf("}")+1);
+            JSONObject obj = new JSONObject(result);
+            int code = obj.optInt("code");
+            int error_type = obj.optInt("error_type");
+
+            if(code == 1){
+                try {
+                    EMClient.getInstance().createAccount(phone, phone);
+                    DemoHelper.getInstance().setCurrentUserName(phone);
+                    try {
+                        Thread.sleep(3 * 10000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    dismissDialog();
+                    EMClient.getInstance().login(phone, phone, new EMCallBack() {
+                        @Override
+                        public void onSuccess() {
+                            EMClient.getInstance().groupManager().loadAllGroups();
+                            EMClient.getInstance().chatManager().loadAllConversations();
+
+                            // 更新当前用户的nickname 此方法的作用是在ios离线推送时能够显示用户nick
+                            boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
+                                    DemoApplication.currentUserNick.trim());
+                            if (!updatenick) {
+                                Log.e("LoginActivity", "update current user nick fail");
+                            }
+                            //异步获取当前用户的昵称和头像(从自己服务器获取，demo使用的一个第三方服务)
+                            DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+
+                            Intent intent = new Intent(MyLoginCheckActivity.this,MyLoginFinishActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onError(int i, String s) {
+
+                        }
+
+                        @Override
+                        public void onProgress(int i, String s) {
+
+                        }
+                    });
+                } catch (HyphenateException e) {
+                    dismissDialog();
+                    e.printStackTrace();
+                }
+
+            } else {
+                dismissDialog();
+                errorHandler.sendEmptyMessage(error_type);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private Handler errorHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case 1:
+                    DialogError.showError(MyLoginCheckActivity.this,"验证码不对");
+                    break;
+                case 2:
+                    DialogError.showError(MyLoginCheckActivity.this,"已注册");
+                    break;
+                case 3:
+                    DialogError.showError(MyLoginCheckActivity.this,"保存用户失败");
+                    break;
+                case 4:
+                    DialogError.showError(MyLoginCheckActivity.this,"验证码过期");
+                    break;
             }
         }
     };

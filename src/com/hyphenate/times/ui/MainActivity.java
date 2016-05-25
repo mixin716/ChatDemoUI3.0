@@ -60,7 +60,6 @@ public class MainActivity extends BaseActivity {
 	private TextView unreadLabel;
 	// 未读通讯录textview
 	private TextView unreadAddressLable;
-
 	private Button[] mTabs;
 	private ContactListFragment contactListFragment;
 	// private conversationListFragment conversationListFragment;
