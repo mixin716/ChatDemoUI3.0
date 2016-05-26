@@ -196,6 +196,9 @@ public class MyLoginSelectPhoneActivity extends BaseActivity implements Callback
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
+        if(resultCode == 101){
+            finish();
+        }
         switch (requestCode) {
             case 12:
                 if (resultCode == RESULT_OK) {
@@ -238,7 +241,7 @@ public class MyLoginSelectPhoneActivity extends BaseActivity implements Callback
                 Intent intent = new Intent(MyLoginSelectPhoneActivity.this,MyLoginCheckActivity.class);
                 intent.putExtra("phone",etPhone.getText().toString().trim());
                 intent.putExtra("code",editText_countryNum.getText().toString().trim());
-                startActivity(intent);
+                startActivityForResult(intent,101);
             }
         } catch (JSONException e) {
             e.printStackTrace();

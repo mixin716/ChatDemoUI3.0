@@ -9,6 +9,7 @@
         android:id="@+id/main_bottom"
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:background="@color/bottom_bar_normal_bg"
         android:gravity="center_vertical"
@@ -105,8 +106,11 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/main_top"
         android:layout_above="@id/main_bottom" />
 
-    <include layout="@layout/view_house_detail_more_top" />
+    <include
+        android:id="@+id/main_top"
+        layout="@layout/view_house_detail_more_top" />
 
 </RelativeLayout>

@@ -34,9 +34,6 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 if (DemoHelper.getInstance().isLoggedIn()) {
-                    // ** 免登陆情况 加载所有本地群和会话
-                    //不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
-                    //加上的话保证进了主页面会话和群组都已经load完毕
                     EMClient.getInstance().groupManager().loadAllGroups();
                     EMClient.getInstance().chatManager().loadAllConversations();
 

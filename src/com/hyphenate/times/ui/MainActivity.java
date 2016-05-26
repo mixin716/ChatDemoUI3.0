@@ -13,6 +13,7 @@
  */
 package com.hyphenate.times.ui;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.hyphenate.EMCallBack;
@@ -34,6 +35,7 @@ import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
+import android.app.ActionBar;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -48,14 +50,18 @@ import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener{
 
 	protected static final String TAG = "MainActivity";
+	private View viewTop;
+	private ImageView imgAdd;
 	// 未读消息textview
 	private TextView unreadLabel;
 	// 未读通讯录textview
@@ -73,6 +79,8 @@ public class MainActivity extends BaseActivity {
 	public boolean isConflict = false;
 	// 账号被移除
 	private boolean isCurrentAccountRemoved = false;
+	private ViewGroup viewIntroduction,viewPrice,viewComment;
+	private List<ViewGroup> switchLayoutList;
 	
 
 	/**
@@ -85,7 +93,9 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
+
+
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
 			// 防止被移除后，没点确定按钮然后按了home键，长期在后台又进app导致的crash
 			// 三个fragment里加的判断同理
@@ -119,10 +129,12 @@ public class MainActivity extends BaseActivity {
 		conversationListFragment = new ConversationListFragment();
 		contactListFragment = new ContactListFragment();
 		settingFragment = new SettingsFragment();
-		fragments = new Fragment[] { conversationListFragment, contactListFragment, settingFragment };
+		phoneFragment = new PhoneFragment();
+		fragments = new Fragment[] {phoneFragment, conversationListFragment, contactListFragment };
 		// 添加显示第一个fragment
-		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
-				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
+		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, phoneFragment)
+				.add(R.id.fragment_container, conversationListFragment).hide(conversationListFragment)
+				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(phoneFragment)
 				.commit();
 		
 		//注册local广播接收者，用于接收demohelper中发出的群组联系人的变动通知
@@ -154,6 +166,17 @@ public class MainActivity extends BaseActivity {
 	 * 初始化组件
 	 */
 	private void initView() {
+		viewTop = View.inflate(this,R.layout.main_top_view,null);
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+		actionBar.setCustomView(viewTop);
+		imgAdd = (ImageView) viewTop.findViewById(R.id.main_add);
+		imgAdd.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, AddContactActivity.class));
+			}
+		});
 		unreadLabel = (TextView) findViewById(R.id.unread_msg_number);
 		unreadAddressLable = (TextView) findViewById(R.id.unread_address_number);
 		mTabs = new Button[3];
@@ -162,6 +185,20 @@ public class MainActivity extends BaseActivity {
 		mTabs[2] = (Button) findViewById(R.id.btn_setting);
 		// 把第一个tab设为选中状态
 		mTabs[0].setSelected(true);
+
+		viewIntroduction = (ViewGroup) findViewById(R.id.activity_house_detail_ll_introduction);
+		viewPrice = (ViewGroup) findViewById(R.id.activity_house_detail_ll_price);
+		viewComment = (ViewGroup) findViewById(R.id.activity_house_detail_ll_comment);
+		viewIntroduction.setTag(0);
+		viewPrice.setTag(1);
+		viewComment.setTag(2);
+		switchLayoutList = new ArrayList<ViewGroup>();
+		switchLayoutList.add(viewIntroduction);
+		switchLayoutList.add(viewPrice);
+		switchLayoutList.add(viewComment);
+		for (ViewGroup group : switchLayoutList) {
+			group.setOnClickListener(this);
+		}
 	}
 
 	/**
@@ -273,7 +310,47 @@ public class MainActivity extends BaseActivity {
         };
         broadcastManager.registerReceiver(broadcastReceiver, intentFilter);
     }
-	
+
+	@Override
+	public void onClick(View view) {
+		Object o = view.getTag();
+		if (o instanceof Integer) {
+			handleSwitchTitle((Integer)o);
+			index = (Integer)o;
+			if (currentTabIndex != index) {
+				FragmentTransaction trx = getSupportFragmentManager().beginTransaction();
+				trx.hide(fragments[currentTabIndex]);
+				if (!fragments[index].isAdded()) {
+					trx.add(R.id.fragment_container, fragments[index]);
+				}
+				trx.show(fragments[index]).commit();
+			}
+			mTabs[currentTabIndex].setSelected(false);
+			// 把当前tab设为选中状态
+			mTabs[index].setSelected(true);
+			currentTabIndex = index;
+		}
+	}
+
+	/** 设置标题栏状态颜色*/
+	private  void handleSwitchTitle(int index){
+		if(switchLayoutList == null || switchLayoutList.size()<=0){
+			return;
+		}
+		for (int i = 0; i < switchLayoutList.size(); i++) {
+			ViewGroup item = switchLayoutList.get(i);
+			TextView text = (TextView)item.getChildAt(0);
+			View lineView = item.getChildAt(1);
+			if (i == index) {
+				lineView.setBackgroundColor(getResources().getColor(R.color.white));
+				text.setTextColor(getResources().getColor(R.color.white));
+			}else{
+				lineView.setBackgroundColor(getResources().getColor(R.color.common_bg_color));
+				text.setTextColor(0xff999999);
+			}
+		}
+	}
+
 	public class MyContactListener implements EMContactListener {
         @Override
         public void onContactAdded(String username) {}
@@ -284,7 +361,7 @@ public class MainActivity extends BaseActivity {
 					if (ChatActivity.activityInstance != null && ChatActivity.activityInstance.toChatUsername != null &&
 							username.equals(ChatActivity.activityInstance.toChatUsername)) {
 					    String st10 = getResources().getString(R.string.have_you_removed);
-					    Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, 1)
+					    Toast.makeText(MainActivity.this, ChatActivity.activityInstance.getToChatUsername() + st10, Toast.LENGTH_LONG)
 					    .show();
 					    ChatActivity.activityInstance.finish();
 					}
@@ -450,7 +527,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			moveTaskToBack(false);
+			moveTaskToBack(true);
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
@@ -464,6 +541,7 @@ public class MainActivity extends BaseActivity {
     private ConversationListFragment conversationListFragment;
     private BroadcastReceiver broadcastReceiver;
     private LocalBroadcastManager broadcastManager;
+	private PhoneFragment phoneFragment;
 
 	/**
 	 * 显示帐号在别处登录dialog

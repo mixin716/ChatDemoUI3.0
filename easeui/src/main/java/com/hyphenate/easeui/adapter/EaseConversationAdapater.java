@@ -100,15 +100,15 @@ public class EaseConversationAdapater extends ArrayAdapter<EMConversation> {
         
         if (conversation.getType() == EMConversationType.GroupChat) {
             // 群聊消息，显示群聊头像
-            holder.avatar.setImageResource(R.drawable.ease_group_icon);
+//            holder.avatar.setImageResource(R.drawable.ease_group_icon);
             EMGroup group = EMClient.getInstance().groupManager().getGroup(username);
             holder.name.setText(group != null ? group.getGroupName() : username);
         } else if(conversation.getType() == EMConversationType.ChatRoom){
-            holder.avatar.setImageResource(R.drawable.ease_group_icon);
+//            holder.avatar.setImageResource(R.drawable.ease_group_icon);
             EMChatRoom room = EMClient.getInstance().chatroomManager().getChatRoom(username);
             holder.name.setText(room != null && !TextUtils.isEmpty(room.getName()) ? room.getName() : username);
         }else {
-            EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
+//            EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
             EaseUserUtils.setUserNick(username, holder.name);
         }
 

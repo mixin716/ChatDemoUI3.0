@@ -47,6 +47,7 @@ public class MyLoginInitActivity extends BaseActivity implements View.OnClickLis
             case R.id.login_init_tv_agree:
                 Intent intent = new Intent(this,MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }

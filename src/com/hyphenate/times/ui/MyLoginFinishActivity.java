@@ -70,6 +70,7 @@ public class MyLoginFinishActivity extends BaseActivity implements View.OnClickL
             case R.id.login_finish_next:
                 Intent intent = new Intent(this,MyLoginInitActivity.class);
                 startActivity(intent);
+                this.finish();
                 break;
         }
     }

@@ -85,7 +85,7 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
         //设置头像
         EaseUserUtils.setUserNick(username, holder.nameView);
         //设置头像
-        EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
+//        EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
         
        
         if(primaryColor != 0)

@@ -24,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hyphenate.EMCallBack;
+import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 import com.hyphenate.times.DemoApplication;
@@ -181,6 +182,7 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
 
         String result = response.body().string();
         try {
+            Log.e("---",result+"  "+result.length());
             result = result.substring(result.indexOf("{"),result.indexOf("}")+1);
             JSONObject obj = new JSONObject(result);
             int code = obj.optInt("code");
@@ -213,6 +215,8 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
 
                             Intent intent = new Intent(MyLoginCheckActivity.this,MyLoginFinishActivity.class);
                             startActivity(intent);
+                            setResult(101);
+                            MyLoginCheckActivity.this.finish();
                         }
 
                         @Override
@@ -228,6 +232,41 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
                 } catch (HyphenateException e) {
                     dismissDialog();
                     e.printStackTrace();
+                    int errorCode=e.getErrorCode();
+                    Log.e("--",errorCode+"---");
+                    if(errorCode == EMError.USER_ALREADY_EXIST){
+                        EMClient.getInstance().login(phone, phone, new EMCallBack() {
+                            @Override
+                            public void onSuccess() {
+                                EMClient.getInstance().groupManager().loadAllGroups();
+                                EMClient.getInstance().chatManager().loadAllConversations();
+
+                                // 更新当前用户的nickname 此方法的作用是在ios离线推送时能够显示用户nick
+                                boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
+                                        DemoApplication.currentUserNick.trim());
+                                if (!updatenick) {
+                                    Log.e("LoginActivity", "update current user nick fail");
+                                }
+                                //异步获取当前用户的昵称和头像(从自己服务器获取，demo使用的一个第三方服务)
+                                DemoHelper.getInstance().getUserProfileManager().asyncGetCurrentUserInfo();
+
+                                Intent intent = new Intent(MyLoginCheckActivity.this,MyLoginFinishActivity.class);
+                                startActivity(intent);
+                                setResult(101);
+                                MyLoginCheckActivity.this.finish();
+                            }
+
+                            @Override
+                            public void onError(int i, String s) {
+
+                            }
+
+                            @Override
+                            public void onProgress(int i, String s) {
+
+                            }
+                        });
+                    }
                 }
 
             } else {

@@ -8,6 +8,7 @@
     <com.hyphenate.easeui.widget.EaseTitleBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:titleBarTitle="@string/set"
         />
 
@@ -398,6 +399,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
                 android:background="#ffffff"
+                android:visibility="gone"
                 android:orientation="vertical" >
 
                 <Button
