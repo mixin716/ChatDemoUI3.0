@@ -8,6 +8,7 @@ import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMGroup;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
+import com.hyphenate.easeui.ui.EaseBaiduMapActivity;
 import com.hyphenate.times.Constant;
 import com.hyphenate.times.DemoHelper;
 import com.hyphenate.times.R;
@@ -23,7 +24,10 @@ import com.hyphenate.util.EasyUtils;
 import com.hyphenate.util.PathUtil;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.media.ThumbnailUtils;
@@ -54,7 +58,27 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentLi
     private static final int MESSAGE_TYPE_RECV_VOICE_CALL = 2;
     private static final int MESSAGE_TYPE_SENT_VIDEO_CALL = 3; 
     private static final int MESSAGE_TYPE_RECV_VIDEO_CALL = 4;
-    
+
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String select = intent.getStringExtra("select");
+            if("document".equals(select)){
+                selectFileFromLocal();
+            } else if("camera".equals(select)){
+                selectPicFromCamera();
+            }else if("gallery".equals(select)){
+                selectPicFromLocal(); // 图库选择图片
+            }else if("audio".equals(select)){
+                Intent intents = new Intent(getActivity(), ImageGridActivity.class);
+                startActivityForResult(intents, REQUEST_CODE_SELECT_VIDEO);
+            }else if("location".equals(select)){
+                startActivityForResult(new Intent(getActivity(), EaseBaiduMapActivity.class), REQUEST_CODE_MAP);
+            }else if("contact".equals(select)){
+
+            }
+        }
+    };
     
     /**
      * 是否为环信小助手
@@ -63,6 +87,9 @@ public class ChatFragment extends EaseChatFragment implements EaseChatFragmentLi
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("chat");
+        getActivity().registerReceiver(receiver,filter);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

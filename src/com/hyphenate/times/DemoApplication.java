@@ -16,6 +16,7 @@ package com.hyphenate.times;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
+import android.util.DisplayMetrics;
 
 import com.hyphenate.times.utils.SharedPrefUtil;
 
@@ -26,7 +27,14 @@ public class DemoApplication extends Application {
 	// login user name
 	public final String PREF_USERNAME = "username";
 	public static int actionbarHeight = 0;
-	
+	/**
+	 * 手机屏幕的高度和宽度
+	 */
+	public static int screenWidth;
+	public static int screenHeight;
+	public static float density;
+	public static float curDensity;// 实际的density
+	public static float frameTop;//状态栏高度
 	/**
 	 * 当前用户nickname,为了苹果推送不是userid而是昵称
 	 */
@@ -41,6 +49,7 @@ public class DemoApplication extends Application {
 		SharedPrefUtil.init(getApplicationContext());
 		//init demo helper
         DemoHelper.getInstance().init(applicationContext);
+		getScreenSize();
 	}
 
 	public static DemoApplication getInstance() {
@@ -52,4 +61,17 @@ public class DemoApplication extends Application {
 		super.attachBaseContext(base);
 		MultiDex.install(this);
 	}
+
+	/**
+	 * 获取屏幕分辨率方法
+	 */
+	private void getScreenSize() {
+		DisplayMetrics dm = new DisplayMetrics();
+		dm = getApplicationContext().getResources().getDisplayMetrics();
+		screenWidth = dm.widthPixels;
+		screenHeight = dm.heightPixels;
+		density = dm.density;
+		curDensity = (float) screenWidth / 320f;
+	}
+
 }

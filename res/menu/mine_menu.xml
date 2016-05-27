@@ -7,11 +7,8 @@
         android:icon="@drawable/em_add"/>
 
     <item
-        android:id="@+id/main_info"
-        android:title="账号信息"/>
-
-    <item
-        android:id="@+id/main_about"
-        android:title="关于我们"/>
+        android:id="@+id/main_set"
+        android:showAsAction="always"
+        android:icon="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"/>
 
 </menu>

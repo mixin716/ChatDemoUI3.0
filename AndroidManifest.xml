@@ -76,6 +76,9 @@
         <activity
             android:name=".ui.AboutActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.SettingActivity"
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.MyLoginCheckActivity"

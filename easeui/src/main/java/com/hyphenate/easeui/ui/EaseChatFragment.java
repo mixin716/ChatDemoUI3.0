@@ -2,8 +2,10 @@ package com.hyphenate.easeui.ui;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
@@ -23,6 +25,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.hyphenate.EMChatRoomChangeListener;
@@ -42,6 +45,7 @@ import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.domain.EaseEmojicon;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.utils.EaseUserUtils;
+import com.hyphenate.easeui.utils.PopupManager;
 import com.hyphenate.easeui.widget.EaseAlertDialog;
 import com.hyphenate.easeui.widget.EaseAlertDialog.AlertDialogUser;
 import com.hyphenate.easeui.widget.EaseChatExtendMenu;
@@ -110,6 +114,26 @@ public class EaseChatFragment extends EaseBaseFragment {
     private boolean isMessageListInited;
     protected MyItemClickListener extendMenuItemClickListener;
 
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String select = intent.getStringExtra("select");
+            if("document".equals(select)){
+
+            } else if("camera".equals(select)){
+                selectPicFromCamera();
+            }else if("gallery".equals(select)){
+                selectPicFromLocal(); // 图库选择图片
+            }else if("audio".equals(select)){
+
+            }else if("location".equals(select)){
+                startActivityForResult(new Intent(getActivity(), EaseBaiduMapActivity.class), REQUEST_CODE_MAP);
+            }else if("contact".equals(select)){
+
+            }
+        }
+    };
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_chat, container, false);
@@ -123,7 +147,6 @@ public class EaseChatFragment extends EaseBaseFragment {
         chatType = fragmentArgs.getInt(EaseConstant.EXTRA_CHAT_TYPE, EaseConstant.CHATTYPE_SINGLE);
         // 会话人或群组id
         toChatUsername = fragmentArgs.getString(EaseConstant.EXTRA_USER_ID);
-
         super.onActivityCreated(savedInstanceState);
     }
 
@@ -186,14 +209,17 @@ public class EaseChatFragment extends EaseBaseFragment {
      */
     protected void setUpView() {
         titleBar.setTitle(toChatUsername);
+//        titleBar.setRightSecondImageResource(R.drawable.abc_ic_menu_moreoverflow_mtrl_alpha);
         if (chatType == EaseConstant.CHATTYPE_SINGLE) { // 单聊
             // 设置标题
             if(EaseUserUtils.getUserInfo(toChatUsername) != null){
                 titleBar.setTitle(EaseUserUtils.getUserInfo(toChatUsername).getNick());
             }
-            titleBar.setRightImageResource(R.drawable.ease_mm_title_remove);
+//            titleBar.setRightImageResource(R.drawable.ease_mm_title_remove);
+            titleBar.setRightImageResource(R.drawable.abc_ic_menu_moreoverflow_mtrl_alpha);
         } else {
-        	titleBar.setRightImageResource(R.drawable.ease_to_group_details_normal);
+        	titleBar.setRightImageResource(R.drawable.abc_ic_menu_moreoverflow_mtrl_alpha);
+//        	titleBar.setRightImageResource(R.drawable.ease_to_group_details_normal);
             if (chatType == EaseConstant.CHATTYPE_GROUP) {
                 // 群聊
                 EMGroup group = EMClient.getInstance().groupManager().getGroup(toChatUsername);
@@ -224,11 +250,12 @@ public class EaseChatFragment extends EaseBaseFragment {
 
             @Override
             public void onClick(View v) {
-                if (chatType == EaseConstant.CHATTYPE_SINGLE) {
-                    emptyHistory();
-                } else {
-                    toGroupDetails();
-                }
+//                if (chatType == EaseConstant.CHATTYPE_SINGLE) {
+//                    emptyHistory();
+//                } else {
+//                    toGroupDetails();
+//                }
+                PopupManager.showSelect(getActivity(),titleBar);
             }
         });
 

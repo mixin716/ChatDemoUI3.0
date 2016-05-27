@@ -93,16 +93,18 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
         //设置头像
 //        EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
 
-        holder.tvShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
-                sendIntent.setData(Uri.parse("smsto:" + username));
-                sendIntent.putExtra("sms_body", "介绍一款聊天软件，Times支持android和IOS平台，请你下载吧:http://www.times.com");
-                context.startActivity(sendIntent);
+        if(holder.tvShare != null){
+            holder.tvShare.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
+                    sendIntent.setData(Uri.parse("smsto:" + username));
+                    sendIntent.putExtra("sms_body", "介绍一款聊天软件，Times支持android和IOS平台，请你下载吧:http://www.times.com");
+                    context.startActivity(sendIntent);
+                }
+            });
+        }
 
-            }
-        });
 
        
         if(primaryColor != 0)

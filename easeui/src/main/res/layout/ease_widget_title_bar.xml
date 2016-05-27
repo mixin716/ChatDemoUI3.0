@@ -31,10 +31,19 @@
 
     <RelativeLayout
         android:id="@+id/right_layout"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:background="@drawable/ease_common_tab_bg" >
+
+        <ImageView
+            android:id="@+id/right_image_second"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@+id/right_image"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside" />
 
         <ImageView
             android:id="@+id/right_image"

@@ -31,25 +31,30 @@ import com.hyphenate.times.db.InviteMessgeDao;
 import com.hyphenate.times.db.UserDao;
 import com.hyphenate.times.domain.InviteMessage;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
+import com.hyphenate.times.utils.PopManager;
 import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Display;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -179,12 +184,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 			case R.id.main_add:
 				startActivity(new Intent(MainActivity.this, AddContactActivity.class));
 				break;
-			case R.id.main_info:
-				startActivity(new Intent(MainActivity.this, MyCountActivity.class));
+			case R.id.main_set:
+				PopManager.showPopMain(this,this.getWindow().getDecorView(),this);
 				break;
-			case R.id.main_about:
-				startActivity(new Intent(MainActivity.this, AboutActivity.class));
-				break;
+//			case R.id.main_info:
+//				startActivity(new Intent(MainActivity.this, MyCountActivity.class));
+//				break;
+//			case R.id.main_about:
+//				startActivity(new Intent(MainActivity.this, AboutActivity.class));
+//				break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -354,6 +362,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 			// 把当前tab设为选中状态
 			mTabs[index].setSelected(true);
 			currentTabIndex = index;
+		}
+		if(view.getId() == R.id.pop_main_tv_set){
+			startActivity(new Intent(this,SettingActivity.class));
 		}
 	}
 

@@ -20,7 +20,7 @@ public class EaseTitleBar extends RelativeLayout{
     protected RelativeLayout leftLayout;
     protected ImageView leftImage;
     protected RelativeLayout rightLayout;
-    protected ImageView rightImage;
+    protected ImageView rightImage,rightSecondImage;
     protected TextView titleView;
     protected RelativeLayout titleLayout;
 
@@ -44,6 +44,7 @@ public class EaseTitleBar extends RelativeLayout{
         leftImage = (ImageView) findViewById(R.id.left_image);
         rightLayout = (RelativeLayout) findViewById(R.id.right_layout);
         rightImage = (ImageView) findViewById(R.id.right_image);
+        rightSecondImage = (ImageView) findViewById(R.id.right_image_second);
         titleView = (TextView) findViewById(R.id.title);
         titleLayout = (RelativeLayout) findViewById(R.id.root);
         
@@ -64,6 +65,10 @@ public class EaseTitleBar extends RelativeLayout{
             if (null != rightDrawable) {
                 rightImage.setImageDrawable(rightDrawable);
             }
+            Drawable rightSecondDrawable = ta.getDrawable(R.styleable.EaseTitleBar_titleBarRightImage);
+            if (null != rightDrawable) {
+                rightSecondImage.setImageDrawable(rightSecondDrawable);
+            }
         
             Drawable background = ta.getDrawable(R.styleable.EaseTitleBar_titleBarBackground);
             if(null != background) {
@@ -80,6 +85,10 @@ public class EaseTitleBar extends RelativeLayout{
     
     public void setRightImageResource(int resId) {
         rightImage.setImageResource(resId);
+    }
+
+    public void setRightSecondImageResource(int resId){
+        rightSecondImage.setImageResource(resId);
     }
     
     public void setLeftLayoutClickListener(OnClickListener listener){
