@@ -19,6 +19,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.hyphenate.EMConnectionListener;
 import com.hyphenate.EMConversationListener;
@@ -46,7 +47,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
     protected List<EMConversation> conversationList = new ArrayList<EMConversation>();
     protected EaseConversationList conversationListView;
     protected FrameLayout errorItemContainer;
-
+    private TextView tvEmpty;
     protected boolean isConflict;
     
     protected EMConversationListener convListener = new EMConversationListener(){
@@ -72,6 +73,7 @@ public class EaseConversationListFragment extends EaseBaseFragment{
 
     @Override
     protected void initView() {
+        tvEmpty = (TextView) getView().findViewById(R.id.list_empty);
         inputMethodManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         //会话列表控件
         conversationListView = (EaseConversationList) getView().findViewById(R.id.list);
@@ -86,7 +88,11 @@ public class EaseConversationListFragment extends EaseBaseFragment{
     protected void setUpView() {
         conversationList.addAll(loadConversationList());
         conversationListView.init(conversationList);
-        
+        if(conversationList.size() == 0){
+            tvEmpty.setVisibility(View.VISIBLE);
+        } else {
+            tvEmpty.setVisibility(View.GONE);
+        }
         if(listItemClickListener != null){
             conversationListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -168,6 +174,11 @@ public class EaseConversationListFragment extends EaseBaseFragment{
 	            	conversationList.clear();
 	                conversationList.addAll(loadConversationList());
 	                conversationListView.refresh();
+                    if(conversationList.size() == 0){
+                        tvEmpty.setVisibility(View.VISIBLE);
+                    } else {
+                        tvEmpty.setVisibility(View.GONE);
+                    }
 	                break;
 	            }
             default:

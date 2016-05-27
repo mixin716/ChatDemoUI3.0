@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.hyphenate.times.R;
+import com.hyphenate.times.utils.SharedPrefUtil;
 
 /**
  * @author GY
@@ -68,6 +69,7 @@ public class MyLoginFinishActivity extends BaseActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login_finish_next:
+                SharedPrefUtil.put("name",etName.getText().toString().trim());
                 Intent intent = new Intent(this,MyLoginInitActivity.class);
                 startActivity(intent);
                 this.finish();

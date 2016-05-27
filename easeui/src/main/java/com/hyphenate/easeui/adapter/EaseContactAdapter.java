@@ -1,7 +1,9 @@
 package com.hyphenate.easeui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseIntArray;
@@ -34,6 +36,7 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
     private int res;
     private MyFilter myFilter;
     private boolean notiyfyByFilter;
+    private Context context;
 
     public EaseContactAdapter(Context context, int resource, List<EaseUser> objects) {
         super(context, resource, objects);
@@ -42,11 +45,13 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
         copyUserList = new ArrayList<EaseUser>();
         copyUserList.addAll(objects);
         layoutInflater = LayoutInflater.from(context);
+        this.context = context;
     }
     
     private static class ViewHolder {
         ImageView avatar;
         TextView nameView;
+        TextView tvShare;
         TextView headerView;
     }
     @Override
@@ -60,6 +65,7 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
                 convertView = layoutInflater.inflate(res, null);
             holder.avatar = (ImageView) convertView.findViewById(R.id.avatar);
             holder.nameView = (TextView) convertView.findViewById(R.id.name);
+            holder.tvShare = (TextView) convertView.findViewById(R.id.share);
             holder.headerView = (TextView) convertView.findViewById(R.id.header);
             convertView.setTag(holder);
         }else{
@@ -69,7 +75,7 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
         EaseUser user = getItem(position);
         if(user == null)
             Log.d("ContactAdapter", position + "");
-        String username = user.getUsername();
+        final String username = user.getUsername();
         String header = user.getInitialLetter();
         
         if (position == 0 || header != null && !header.equals(getItem(position - 1).getInitialLetter())) {
@@ -86,7 +92,18 @@ public class EaseContactAdapter extends ArrayAdapter<EaseUser> implements Sectio
         EaseUserUtils.setUserNick(username, holder.nameView);
         //设置头像
 //        EaseUserUtils.setUserAvatar(getContext(), username, holder.avatar);
-        
+
+        holder.tvShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO);
+                sendIntent.setData(Uri.parse("smsto:" + username));
+                sendIntent.putExtra("sms_body", "介绍一款聊天软件，Times支持android和IOS平台，请你下载吧:http://www.times.com");
+                context.startActivity(sendIntent);
+
+            }
+        });
+
        
         if(primaryColor != 0)
             holder.nameView.setTextColor(primaryColor);

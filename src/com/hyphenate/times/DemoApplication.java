@@ -17,6 +17,8 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.hyphenate.times.utils.SharedPrefUtil;
+
 public class DemoApplication extends Application {
 
 	public static Context applicationContext;
@@ -36,8 +38,8 @@ public class DemoApplication extends Application {
 		super.onCreate();
         applicationContext = this;
         instance = this;
-        
-        //init demo helper
+		SharedPrefUtil.init(getApplicationContext());
+		//init demo helper
         DemoHelper.getInstance().init(applicationContext);
 	}
 

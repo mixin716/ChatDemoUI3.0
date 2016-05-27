@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="正在等待自动检测短信发至"
+        android:text="正在等待短信发至"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -36,6 +36,7 @@
             android:gravity="center"
             android:inputType="phone"
             android:lineSpacingExtra="5dp"
+            android:background="@color/white"
             android:hint="--- ----"
             android:textColor="@color/black"
             android:textColorHint="@color/black"

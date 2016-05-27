@@ -32,6 +32,7 @@ import com.hyphenate.times.DemoHelper;
 import com.hyphenate.times.R;
 import com.hyphenate.times.utils.DialogError;
 import com.hyphenate.times.utils.LoginModel;
+import com.hyphenate.times.utils.SharedPrefUtil;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -121,6 +122,7 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
                 if(!TextUtils.isEmpty(s.toString())){
                     if(s.length() == 6){
                         showLoading("");
+                        SharedPrefUtil.put("phone",code+phone);
                         LoginModel.sendVerify(code+phone,s.toString(),MyLoginCheckActivity.this);
                     }
                 }
@@ -174,7 +176,7 @@ public class MyLoginCheckActivity extends BaseActivity implements View.OnClickLi
 
     @Override
     public void onFailure(Request request, IOException e) {
-
+        dismissDialog();
     }
 
     @Override

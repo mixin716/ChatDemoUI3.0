@@ -226,7 +226,7 @@ public class MyLoginSelectPhoneActivity extends BaseActivity implements Callback
 
     @Override
     public void onFailure(Request request, IOException e) {
-
+        dismissDialog();
     }
 
     @Override

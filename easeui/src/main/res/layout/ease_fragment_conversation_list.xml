@@ -6,32 +6,46 @@
     android:background="@color/common_bg"
     android:orientation="vertical">
 
-	<com.hyphenate.easeui.widget.EaseTitleBar 
-	    android:id="@+id/title_bar"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-		android:visibility="gone"
-	    hyphenate:titleBarTitle="@string/session"
-	    />
-    
-    <include layout="@layout/ease_search_bar" />
-    
-    <FrameLayout
+    <com.hyphenate.easeui.widget.EaseTitleBar
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
+        hyphenate:titleBarTitle="@string/session" />
+
+    <include layout="@layout/ease_search_bar" />
+
+    <FrameLayout
         android:id="@+id/fl_error_item"
-        >
-    </FrameLayout>
-
-
-    <com.hyphenate.easeui.widget.EaseConversationList
-        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:cacheColorHint="#00000000"
-        android:divider="@null"
-        hyphenate:cvsListPrimaryTextSize="16sp"
-         />
+        android:layout_height="wrap_content"></FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hyphenate.easeui.widget.EaseConversationList
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            hyphenate:cvsListPrimaryTextSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textColor="@color/black_deep"
+            android:text="点击上方的添加按钮来开始和Times联系人发送信息"/>
+
+    </RelativeLayout>
+
 
 </LinearLayout>

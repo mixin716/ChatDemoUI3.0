@@ -45,10 +45,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Display;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -74,7 +78,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	private Fragment[] fragments;
 	private int index;
 	// 当前fragment的index
-	private int currentTabIndex;
+	private int currentTabIndex = 1;
 	// 账号在别处登录
 	public boolean isConflict = false;
 	// 账号被移除
@@ -93,8 +97,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-
+		getActionBar().setDisplayUseLogoEnabled(false);
+		getActionBar().setDisplayShowHomeEnabled(false);
 
 		if (savedInstanceState != null && savedInstanceState.getBoolean(Constant.ACCOUNT_REMOVED, false)) {
 			// 防止被移除后，没点确定按钮然后按了home键，长期在后台又进app导致的crash
@@ -132,9 +136,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 		phoneFragment = new PhoneFragment();
 		fragments = new Fragment[] {phoneFragment, conversationListFragment, contactListFragment };
 		// 添加显示第一个fragment
-		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, phoneFragment)
-				.add(R.id.fragment_container, conversationListFragment).hide(conversationListFragment)
-				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(phoneFragment)
+		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, phoneFragment).hide(phoneFragment)
+				.add(R.id.fragment_container, contactListFragment).hide(contactListFragment)
+				.add(R.id.fragment_container, conversationListFragment).show(conversationListFragment)
 				.commit();
 		
 		//注册local广播接收者，用于接收demohelper中发出的群组联系人的变动通知
@@ -160,23 +164,36 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	            .getSystemService(Context.WINDOW_SERVICE);    
 	    Display display = manager.getDefaultDisplay();    
 	    return display.getHeight();    
-	} 
-	
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.mine_menu, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+			case R.id.main_add:
+				startActivity(new Intent(MainActivity.this, AddContactActivity.class));
+				break;
+			case R.id.main_info:
+				startActivity(new Intent(MainActivity.this, MyCountActivity.class));
+				break;
+			case R.id.main_about:
+				startActivity(new Intent(MainActivity.this, AboutActivity.class));
+				break;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 	/**
 	 * 初始化组件
 	 */
 	private void initView() {
-		viewTop = View.inflate(this,R.layout.main_top_view,null);
-		ActionBar actionBar = getActionBar();
-		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-		actionBar.setCustomView(viewTop);
-		imgAdd = (ImageView) viewTop.findViewById(R.id.main_add);
-		imgAdd.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(MainActivity.this, AddContactActivity.class));
-			}
-		});
+
 		unreadLabel = (TextView) findViewById(R.id.unread_msg_number);
 		unreadAddressLable = (TextView) findViewById(R.id.unread_address_number);
 		mTabs = new Button[3];
@@ -315,8 +332,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 	public void onClick(View view) {
 		Object o = view.getTag();
 		if (o instanceof Integer) {
-			handleSwitchTitle((Integer)o);
 			index = (Integer)o;
+			if(index == 0){
+				Intent intent=new Intent();
+				intent.setAction(Intent.ACTION_CALL_BUTTON);
+				startActivity(intent);
+				return;
+			}
+
+			handleSwitchTitle((Integer)o);
+
 			if (currentTabIndex != index) {
 				FragmentTransaction trx = getSupportFragmentManager().beginTransaction();
 				trx.hide(fragments[currentTabIndex]);
